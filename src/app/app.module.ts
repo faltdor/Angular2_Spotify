@@ -15,6 +15,7 @@ import { routingComponents } from './app.routes';
 
 import { SpotifyService } from './services/spotify.service';
 import { ArtistComponent } from './components/artist/artist.component';
+import { AlbumComponent } from './components/album/album.component';
 
 
 @NgModule({
@@ -24,7 +25,8 @@ import { ArtistComponent } from './components/artist/artist.component';
     AboutComponent,
     SearchComponent,
     routingComponents,
-    ArtistComponent
+    ArtistComponent,
+    AlbumComponent
     
   ],
   imports: [
