@@ -9,8 +9,7 @@ import { Album } from '../../model/album';
 
 
 
-@Component({
-  moduleId:module.id,
+@Component({  
   selector: 'app-artist',
   templateUrl: './artist.component.html',
   styleUrls: ['./artist.component.css']
@@ -33,11 +32,13 @@ export class ArtistComponent implements OnInit {
   				this._spotifyService.getArtist(id)
   						.subscribe(artist => {
   							this.artist = artist;
+                console.log(this.artist);                
   						})	
 
           this._spotifyService.getAlbums(id)
               .subscribe(albums => {
                 this.albums = albums.items;
+                console.log(this.albums);  
               })      
 
   			})

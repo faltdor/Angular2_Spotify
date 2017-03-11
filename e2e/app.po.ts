@@ -8,4 +8,8 @@ export class NgSpotyFyPage {
   getParagraphText() {
     return element(by.css('app-root h1')).getText();
   }
+
+  getSringSearch() {
+    return element(by.model('searchStr')).getText();
+  }
 }

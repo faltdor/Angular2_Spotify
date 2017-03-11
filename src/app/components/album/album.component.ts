@@ -17,10 +17,12 @@ import { Album } from '../../model/album';
 export class AlbumComponent implements OnInit {
 
   id:string;
-  album: Album[];	
-
+  album: any = false;	
+ 
   constructor(private _spotifyService: SpotifyService,
-  			  private _activatedRoute:ActivatedRoute ) { }
+  			  private _activatedRoute:ActivatedRoute ) {    
+    
+  }
 
 
     ngOnInit() {
@@ -31,10 +33,7 @@ export class AlbumComponent implements OnInit {
   						.subscribe(album => {
   							this.album = album;
   						})	
-
-          
-
-  			})
+   			})
 
   }
 
