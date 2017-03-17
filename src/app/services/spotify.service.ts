@@ -19,7 +19,7 @@ export class SpotifyService {
   	console.log(this.searchUrl);
 
     return this._http.get(this.searchUrl)
-  					  .map(res => res.json().artists.items);
+  					  .map(res => res.json().artists.items );
     
   }
 

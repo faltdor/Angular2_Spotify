@@ -8,12 +8,12 @@ proident, sunt in culpa qui officia deserunt mollit anim id est laborum. </p>
 
 <form >
 	<div class="form-group">
-		<input type="text" name="searchStr" [(ngModel)]="searchStr" class="form-control" placeholder="Search Music..." (keyup)="searchMusic()">
+		<input type="text" [formControl]="term"  #searchStr (keyup)="searchMusic(searchStr.value)"  class="form-control" placeholder="Search Music..." >
 	</div>
 </form>
 
 <div *ngIf="serchResult">
-	<div *ngFor="let res of serchResult">
+	<div *ngFor="let res of serchResult | async">
 		<div class="row">
 			<div class="col-md-12">
 				<div class="search-res well">
